@@ -1,0 +1,162 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.10.0 (Oracle Corporation Java 19)
+[debug]       Load.loadUnit: plugins took 196.3815ms
+[debug]       Load.loadUnit: defsScala took 0.984001ms
+[debug] [Loading] Scanning directory C:\Users\leoto\.sbt\1.0\plugins
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\leoto\.sbt\1.0\plugins, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 37.953201 ms
+[debug]           Load.resolveProject(global-plugins) took 75.237101ms
+[debug]         Load.loadTransitive: finalizeProject(Project(id global-plugins, base: C:\Users\leoto\.sbt\1.0\plugins, plugins: List(<none>))) took 152.8892ms
+[debug] [Loading] Done in C:\Users\leoto\.sbt\1.0\plugins, returning: (global-plugins)
+[debug]       Load.loadUnit: loadedProjectsRaw took 202.364701ms
+[debug]       Load.loadUnit: cleanEvalClasses took 0.339901ms
+[debug]     Load.loadUnit(file:/C:/Users/leoto/.sbt/1.0/plugins/, ...) took 424.0875ms
+[debug]   Load.apply: load took 751.0698ms
+[debug]   Load.apply: resolveProjects took 9.032799ms
+[debug]   Load.apply: finalTransforms took 100.628399ms
+[debug]   Load.apply: config.delegates took 13.3028ms
+[debug]   Load.apply: Def.make(settings)... took 788.5429ms
+[debug]   Load.apply: structureIndex took 182.9454ms
+[debug]   Load.apply: mkStreams took 4.7862ms
+[info] loading global plugins from C:\Users\leoto\.sbt\1.0\plugins
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Load.defaultLoad until apply took 3796.153299ms
+[debug]           Load.loadUnit: plugins took 51.023ms
+[debug]           Load.loadUnit: defsScala took 0.005101ms
+[debug] [Loading] Scanning directory C:\Users\leoto\IdeaProjects\functional-graphs\project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\leoto\IdeaProjects\functional-graphs\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 3.525899 ms
+[debug]               Load.resolveProject(functional-graphs-build) took 1.7616ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id functional-graphs-build, base: C:\Users\leoto\IdeaProjects\functional-graphs\project, plugins: List(<none>))) took 6.1163ms
+[debug] [Loading] Done in C:\Users\leoto\IdeaProjects\functional-graphs\project, returning: (functional-graphs-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 9.1796ms
+[debug]           Load.loadUnit: cleanEvalClasses took 0.013101ms
+[debug]         Load.loadUnit(file:/C:/Users/leoto/IdeaProjects/functional-graphs/project/, ...) took 61.923001ms
+[debug]       Load.apply: load took 64.8303ms
+[debug]       Load.apply: resolveProjects took 0.124901ms
+[debug]       Load.apply: finalTransforms took 15.4567ms
+[debug]       Load.apply: config.delegates took 0.566699ms
+[debug]       Load.apply: Def.make(settings)... took 111.6132ms
+[debug]       Load.apply: structureIndex took 51.4536ms
+[debug]       Load.apply: mkStreams took 0.004ms
+[info] loading project definition from C:\Users\leoto\IdeaProjects\functional-graphs\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 552.3486ms
+[debug]     Load.loadUnit: defsScala took 0.0043ms
+[debug] [Loading] Scanning directory C:\Users\leoto\IdeaProjects\functional-graphs
+[debug]       Load.loadUnit: mkEval took 6.6139ms
+[debug] [Loading] Found root project root w/ remaining core,app
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 4.120599 ms
+[info] loading settings for project root from build.sbt ...
+[debug]         Load.resolveProject(root) took 5.6153ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id root, base: C:\Users\leoto\IdeaProjects\functional-graphs, aggregate: List(LocalProject(core), LocalProject(app)), plugins: List(<none>))) took 11.4859ms
+[debug] [Loading] Loading project core @ C:\Users\leoto\IdeaProjects\functional-graphs\core
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.6739 ms
+[debug]       Load.resolveProject(core) took 2.219ms
+[debug] [Loading] Loading project app @ C:\Users\leoto\IdeaProjects\functional-graphs\app
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.8806 ms
+[debug]       Load.resolveProject(app) took 1.2954ms
+[debug] [Loading] Done in C:\Users\leoto\IdeaProjects\functional-graphs, returning: (root, core, app)
+[debug]     Load.loadUnit: loadedProjectsRaw took 4896.043901ms
+[debug]     Load.loadUnit: cleanEvalClasses took 50.287ms
+[debug]   Load.loadUnit(file:/C:/Users/leoto/IdeaProjects/functional-graphs/, ...) took 5500.814499ms
+[debug] Load.apply: load took 5506.7425ms
+[debug] Load.apply: resolveProjects took 0.6318ms
+[debug] Load.apply: finalTransforms took 36.3517ms
+[debug] Load.apply: config.delegates took 1.142399ms
+[debug] Load.apply: Def.make(settings)... took 260.026ms
+[debug] Load.apply: structureIndex took 105.8054ms
+[debug] Load.apply: mkStreams took 0.0036ms
+[info] set current project to functional-graphs (in build file:/C:/Users/leoto/IdeaProjects/functional-graphs/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(shell, None, None)
+[info] 
+[info] Here are some highlights of sbt 1.10.0:
+[info]   - SIP-51 support for Scala 2.13 evolution
+[info]   - Various Zinc fixes
+[info]   - ConsistentAnalysisFormat: new Zinc Analysis serialization
+[info]   - CommandProgress API
+[info] See https://eed3si9n.com/sbt-1.10.0 for full release notes.
+[info] Hide the banner for this release by running `skipBanner`.
+[info] sbt server started at local:sbt-server-7e5392fa2f83796d7180
+[debug] Writing bsp connection file
+[info] started sbt server
