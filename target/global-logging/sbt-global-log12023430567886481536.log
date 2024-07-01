@@ -1,0 +1,3 @@
+[debug] > Exec(project core, Some(8f7e3b59-cc98-431e-8ed6-27097a701331), Some(CommandSource(console0)))
+[info] set current project to core (in build file:/C:/Users/leoto/IdeaProjects/functional-graphs/)
+[debug] > Exec(shell, None, None)

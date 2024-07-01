@@ -1,0 +1,14 @@
+[debug] > Exec(test, Some(638c5bd8-8d95-45df-a159-d36f93670493), Some(CommandSource(console0)))
+[debug] Evaluating tasks: Test / test
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\leoto\IdeaProjects\functional-graphs\core\target\scala-3.3.0\classes ...
+[error] error while loading ElementType,
+[error] class file /modules/java.base/java/lang/annotation/ElementType.class is broken, reading aborted with class java.lang.RuntimeException
+[error] bad constant pool index: 0 at pos: 1220
+[error] error while loading AccessFlag,
+[error] class file /modules/java.base/java/lang/reflect/AccessFlag.class is broken, reading aborted with class java.lang.RuntimeException
+[error] bad constant pool index: 0 at pos: 5189
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 7 s, completed 1 Jul 2024, 10:58:15
+[debug] > Exec(shell, None, None)

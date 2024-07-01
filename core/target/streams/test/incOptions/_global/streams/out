@@ -1,0 +1,11 @@
+[debug] Created transactional ClassFileManager with tempDir = C:\Users\leoto\IdeaProjects\functional-graphs\core\target\scala-3.3.0\test-classes.bak
+[debug] About to delete class files:
+[debug] 	DirectedGraphTest.class
+[debug] 	DirectedGraphTest.tasty
+[debug] We backup class files:
+[debug] 	DirectedGraphTest.class
+[debug] 	DirectedGraphTest.tasty
+[debug] Registering generated classes:
+[debug] 	DirectedGraphTest.class
+[debug] 	DirectedGraphTest.tasty
+[debug] Removing the temporary directory used for backing up class files: C:\Users\leoto\IdeaProjects\functional-graphs\core\target\scala-3.3.0\test-classes.bak

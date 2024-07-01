@@ -1,0 +1,15 @@
+[debug] Running TaskDef(graphs.DirectedGraphTest, org.scalatest.tools.Framework$$anon$1@5e2e8985, false, [SuiteSelector])
+[info] DirectedGraphTest:
+[info] A DirectedGraph
+[info] - should add and remove edges correctly
+[info] A DirectedGraph
+[info] - should return the correct number of edges *** FAILED ***
+[info]   2 did not equal 3 (DirectedGraphTest.scala:29)
+[info] Run completed in 396 milliseconds.
+[info] Total number of tests run: 2
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 1, failed 1, canceled 0, ignored 0, pending 0
+[info] *** 1 TEST FAILED ***
+[error] Failed tests:
+[error] 	graphs.DirectedGraphTest
+[error] (core / Test / testOnly) sbt.TestsFailedException: Tests unsuccessful

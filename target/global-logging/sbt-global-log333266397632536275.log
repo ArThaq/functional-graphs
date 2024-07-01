@@ -1,0 +1,21 @@
+[debug] > Exec(testOnly *DirectedGraphTest, None, None)
+[debug] Evaluating tasks: core / Test / testOnly, app / Test / testOnly, Test / testOnly
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\leoto\IdeaProjects\functional-graphs\core\target\scala-3.3.0\test-classes ...
+[info] Passed: Total 0, Failed 0, Errors 0, Passed 0
+[info] No tests to run for Test / testOnly
+[info] Passed: Total 0, Failed 0, Errors 0, Passed 0
+[info] No tests to run for app / Test / testOnly
+[info] done compiling
+[info] DirectedGraphTest:
+[info] A DirectedGraph
+[info] - should add and remove edges correctly
+[info] A DirectedGraph
+[info] - should return the correct number of edges
+[info] Run completed in 302 milliseconds.
+[info] Total number of tests run: 2
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 2, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[success] Total time: 2 s, completed 1 Jul 2024, 12:16:50
+[debug] > Exec(idea-shell, None, None)

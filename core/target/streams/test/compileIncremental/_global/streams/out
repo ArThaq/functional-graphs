@@ -1,0 +1,37 @@
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 3 products, 3 sources, 7 libraries
+[debug] current source = Set(${BASE}/core/src/test/scala/graphs/DirectedGraphTest.scala, ${BASE}/core/src/test/scala/graphs/UndirectedGraphTest.scala, ${BASE}/core/src/test/scala/graphs/WeightedGraphTest.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/core/src/test/scala/graphs/DirectedGraphTest.scala), unmodified = ...),Set(${BASE}/core/target/scala-3.3.0/test-classes/graphs/DirectedGraphTest.class),Set(),API Changes: Set())
+[debug] 
+[debug] Initial source changes:
+[debug] 	removed: Set()
+[debug] 	added: Set()
+[debug] 	modified: Set(${BASE}/core/src/test/scala/graphs/DirectedGraphTest.scala)
+[debug] Invalidated products: Set(${BASE}/core/target/scala-3.3.0/test-classes/graphs/DirectedGraphTest.class)
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set(graphs.DirectedGraphTest)
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set(${BASE}/core/src/test/scala/graphs/DirectedGraphTest.scala)
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All initially invalidated classes: Set(graphs.DirectedGraphTest)
+[debug] All initially invalidated sources:Set(${BASE}/core/src/test/scala/graphs/DirectedGraphTest.scala)
+[debug] Initial set of included nodes: graphs.DirectedGraphTest
+[debug] compilation cycle 1
+[info] compiling 1 Scala source to C:\Users\leoto\IdeaProjects\functional-graphs\core\target\scala-3.3.0\test-classes ...
+[debug] Returning already retrieved and compiled bridge: C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-sbt-bridge\3.3.0\scala3-sbt-bridge-3.3.0.jar.
+[debug] [zinc] Running cached compiler 5c34c97f for Scala Compiler version 3.3.0
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-classpath
+[debug] 	C:\Users\leoto\IdeaProjects\functional-graphs\core\target\scala-3.3.0\test-classes;C:\Users\leoto\IdeaProjects\functional-graphs\core\target\scala-3.3.0\classes;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala3-library_3\3.3.0\scala3-library_3-3.3.0.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest_3\3.2.14\scalatest_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio_3\2.0.15\zio_3-2.0.15.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio-json_3\0.3.0\zio-json_3-0.3.0.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.10\scala-library-2.13.10.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-core_3\3.2.14\scalatest-core_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-featurespec_3\3.2.14\scalatest-featurespec_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-flatspec_3\3.2.14\scalatest-flatspec_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-freespec_3\3.2.14\scalatest-freespec_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-funsuite_3\3.2.14\scalatest-funsuite_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-funspec_3\3.2.14\scalatest-funspec_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-propspec_3\3.2.14\scalatest-propspec_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-refspec_3\3.2.14\scalatest-refspec_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-wordspec_3\3.2.14\scalatest-wordspec_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-diagrams_3\3.2.14\scalatest-diagrams_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-matchers-core_3\3.2.14\scalatest-matchers-core_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-shouldmatchers_3\3.2.14\scalatest-shouldmatchers_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-mustmatchers_3\3.2.14\scalatest-mustmatchers_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio-internal-macros_3\2.0.15\zio-internal-macros_3-2.0.15.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio-stacktracer_3\2.0.15\zio-stacktracer_3-2.0.15.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\izumi-reflect_3\2.3.8\izumi-reflect_3-2.3.8.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio-streams_3\2.0.2\zio-streams_3-2.0.2.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-collection-compat_3\2.8.1\scala-collection-compat_3-2.8.1.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\com\softwaremill\magnolia1_3\magnolia_3\1.1.5\magnolia_3-1.1.5.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalactic\scalactic_3\3.2.14\scalactic_3-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scalatest\scalatest-compatible\3.2.14\scalatest-compatible-3.2.14.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-xml_3\2.1.0\scala-xml_3-2.1.0.jar;C:\Users\leoto\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\izumi-reflect-thirdparty-boopickle-shaded_3\2.3.8\izumi-reflect-thirdparty-boopickle-shaded_3-2.3.8.jar
+[debug] Scala compilation took 0.7889376 s
+[info] done compiling
+[debug] New invalidations:
+[debug] Initial set of included nodes: 
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] Final step, transitive dependencies:
+[debug] 	Set()
+[debug] Initial set of included nodes: graphs.DirectedGraphTest
+[debug] No classes were invalidated.
