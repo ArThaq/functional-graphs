@@ -1,37 +1,52 @@
 package graphs
 
-case class UndirectedGraph[V](vertices: Set[V], adjacencyList: Map[V, Set[V]])(implicit ordering: Ordering[V]) extends Graph[V, (V, V)] {
-  def edges: Set[(V, V)] = adjacencyList.flatMap { case (from, toSet) =>
-    toSet.map(to => if (ordering.compare(from, to) <= 0) (from, to) else (to, from))
-  }.toSet
+import zio.json._
 
-  def neighbors(vertex: V): Set[V] = adjacencyList.getOrElse(vertex, Set.empty)
+case class UndirectedGraph[V](vertices: Set[V], adjacencyList: Map[V, Set[V]]) {
 
   def addEdge(edge: (V, V)): UndirectedGraph[V] = {
-    val (from, to) = edge
-    val updatedAdjacencyList = adjacencyList
-      .updatedWith(from) {
-        case Some(neighbors) => Some(neighbors + to)
-        case None => Some(Set(to))
+    val (v1, v2) = edge
+    val updatedList = adjacencyList
+      .updatedWith(v1) {
+        case Some(neighbors) => Some(neighbors + v2)
+        case None => Some(Set(v2))
       }
-      .updatedWith(to) {
-        case Some(neighbors) => Some(neighbors + from)
-        case None => Some(Set(from))
+      .updatedWith(v2) {
+        case Some(neighbors) => Some(neighbors + v1)
+        case None => Some(Set(v1))
       }
-    copy(adjacencyList = updatedAdjacencyList)
+    UndirectedGraph(vertices + v1 + v2, updatedList)
   }
 
   def removeEdge(edge: (V, V)): UndirectedGraph[V] = {
-    val (from, to) = edge
-    val updatedAdjacencyList = adjacencyList
-      .updatedWith(from) {
-        case Some(neighbors) => Some(neighbors - to)
+    val (v1, v2) = edge
+    val updatedList = adjacencyList
+      .updatedWith(v1) {
+        case Some(neighbors) => Some(neighbors - v2)
         case None => None
       }
-      .updatedWith(to) {
-        case Some(neighbors) => Some(neighbors - from)
+      .updatedWith(v2) {
+        case Some(neighbors) => Some(neighbors - v1)
         case None => None
       }
-    copy(adjacencyList = updatedAdjacencyList)
+    UndirectedGraph(vertices, updatedList)
+  }
+
+  def edgeCount: Int = adjacencyList.values.map(_.size).sum / 2
+
+  def neighbors(vertex: V): Set[V] = adjacencyList.getOrElse(vertex, Set.empty)
+}
+
+object UndirectedGraph {
+  implicit def encoder[V: JsonEncoder: JsonFieldEncoder]: JsonEncoder[UndirectedGraph[V]] = {
+    implicit val setEncoder: JsonEncoder[Set[V]] = JsonEncoder.set[V]
+    implicit val mapEncoder: JsonEncoder[Map[V, Set[V]]] = JsonEncoder.map[V, Set[V]]
+    DeriveJsonEncoder.gen[UndirectedGraph[V]]
+  }
+
+  implicit def decoder[V: JsonDecoder: JsonFieldDecoder]: JsonDecoder[UndirectedGraph[V]] = {
+    implicit val setDecoder: JsonDecoder[Set[V]] = JsonDecoder.set[V]
+    implicit val mapDecoder: JsonDecoder[Map[V, Set[V]]] = JsonDecoder.map[V, Set[V]]
+    DeriveJsonDecoder.gen[UndirectedGraph[V]]
   }
 }

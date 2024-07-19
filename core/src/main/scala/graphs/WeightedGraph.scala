@@ -1,31 +1,52 @@
 package graphs
 
-case class WeightedGraph[V, E](vertices: Set[V], adjacencyList: Map[V, Set[(V, E)]]) extends Graph[V, (V, V, E)] {
-  def edges: Set[(V, V, E)] = adjacencyList.flatMap { case (from, toSet) =>
-    toSet.map { case (to, weight) => (from, to, weight) }
-  }.toSet
+import zio.json._
 
-  // Return the neighbors without weights for compatibility with the Graph trait
-  def neighbors(vertex: V): Set[V] = adjacencyList.getOrElse(vertex, Set.empty).map(_._1)
-
-  // Return neighbors with weights
-  def weightedNeighbors(vertex: V): Set[(V, E)] = adjacencyList.getOrElse(vertex, Set.empty)
+case class WeightedGraph[V, E](vertices: Set[V], adjacencyList: Map[V, Set[(V, E)]]) {
 
   def addEdge(edge: (V, V, E)): WeightedGraph[V, E] = {
     val (from, to, weight) = edge
-    val updatedAdjacencyList = adjacencyList.updatedWith(from) {
+    val updatedList = adjacencyList.updatedWith(from) {
       case Some(neighbors) => Some(neighbors + ((to, weight)))
       case None => Some(Set((to, weight)))
     }
-    copy(adjacencyList = updatedAdjacencyList)
+    WeightedGraph(vertices + from + to, updatedList)
   }
 
   def removeEdge(edge: (V, V, E)): WeightedGraph[V, E] = {
     val (from, to, weight) = edge
-    val updatedAdjacencyList = adjacencyList.updatedWith(from) {
+    val updatedList = adjacencyList.updatedWith(from) {
       case Some(neighbors) => Some(neighbors - ((to, weight)))
       case None => None
     }
-    copy(adjacencyList = updatedAdjacencyList)
+    WeightedGraph(vertices, updatedList)
+  }
+
+  def edgeCount: Int = adjacencyList.values.map(_.size).sum
+
+  def neighbors(vertex: V): Set[(V, E)] = adjacencyList.getOrElse(vertex, Set.empty)
+
+  // Ajoutez cette méthode pour obtenir toutes les arêtes
+  def edges: Set[(V, V, E)] = {
+    adjacencyList.flatMap { case (from, neighbors) =>
+      neighbors.map { case (to, weight) => (from, to, weight) }
+    }.toSet
+  }
+
+  // Ajoutez cette méthode pour obtenir les voisins pondérés
+  def weightedNeighbors(vertex: V): Set[(V, E)] = adjacencyList.getOrElse(vertex, Set.empty)
+}
+
+object WeightedGraph {
+  implicit def encoder[V: JsonEncoder: JsonFieldEncoder, E: JsonEncoder]: JsonEncoder[WeightedGraph[V, E]] = {
+    implicit val setEncoder: JsonEncoder[Set[(V, E)]] = JsonEncoder.set[(V, E)]
+    implicit val mapEncoder: JsonEncoder[Map[V, Set[(V, E)]]] = JsonEncoder.map[V, Set[(V, E)]]
+    DeriveJsonEncoder.gen[WeightedGraph[V, E]]
+  }
+
+  implicit def decoder[V: JsonDecoder: JsonFieldDecoder, E: JsonDecoder]: JsonDecoder[WeightedGraph[V, E]] = {
+    implicit val setDecoder: JsonDecoder[Set[(V, E)]] = JsonDecoder.set[(V, E)]
+    implicit val mapDecoder: JsonDecoder[Map[V, Set[(V, E)]]] = JsonDecoder.map[V, Set[(V, E)]]
+    DeriveJsonDecoder.gen[WeightedGraph[V, E]]
   }
 }
